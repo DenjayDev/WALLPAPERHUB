@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>wallpaperhub</title>
+    <link rel="stylesheet" href="../STYLESHEETS/style.css">
+
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="header-content">
+            <div class="logo">
+                <h1>WallpaperHub</h1>
+                <p>Discover Beautiful Wallpapers</p>
+            </div>
+            <div class="search-wrapper">
+                <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+                <input id="wallpaper-search" type="search" placeholder="Search wallpapers (eg. animals, oceans...)"
+                    aria-label="Search wallpapers">
+            </div>
+            <div class="buttons">
+                <a href="../PAGES/upload.html">
+                    <button class="Upload">Upload</button> <!-- First-child -->
+                </a>
+                <a href="../PAGES/signInPage.html">
+                    <button class="Sign-In">Sign In</button> <!-- Second-child -->
+                </a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="wallpapers">
+            <br><br>
+            <h1>Explore Premium Wallpapers</h1>
+            <p>Discover beautiful wallpapers in this category.</p>
+            <br>
+            <h2 id="category-type">Loading...</h2>
+            <br>
+            <div class="categories-container" id="category-buttons">
+                <a href="index.html" class="category">All</a>
+                <a href="categorypage.html?category=nature" class="category">Nature</a>
+                <a href="categorypage.html?category=abstract" class="category">Abstract</a>
+                <a href="categorypage.html?category=city" class="category">City</a>
+                <a href="categorypage.html?category=space" class="category">Space</a>
+                <a href="categorypage.html?category=minimal" class="category">Minimal</a>
+                <a href="categorypage.html?category=animals" class="category">Animals</a>
+                <a href="categorypage.html?category=oceans" class="category">Oceans</a>
+                <a href="categorypage.html?category=mountains" class="category">Mountains</a>
+                <a href="categorypage.html?category=deserts" class="category">Deserts</a>
+            </div>
+            <br>
+
+            <div id="wallpaper-grid" class="wallpaper-grid">
+                <!-- Wallpapers will be dynamically loaded here -->
+            </div>
+
+        </section>
+    </main>
+    <footer id="site-footer" class="site-footer">
+        <div class="footer-content">
+            <br>
+            <p class="footer-p">WallpaperHub</p>
+            <p class="footer-p">Home of quality wallpapers</p>
+            <p class="footer-p">© by capstone 10 @wallpaperhub</p>
+        </div>
+    </footer>
+
+
+
+    <script src="../JAVASCRIPTS/gallery.js"></script>
+</body>
+
+</html>

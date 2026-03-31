@@ -1,0 +1,478 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    /* line-height: 1.75rem; */
+}
+
+body {
+    width: 100%;
+    background-color: #c0c0c3;
+    background-size: cover;
+    background-position: center;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    z-index: 100;
+    padding: 10px 20px;
+    /* the 2 values represent the top/bottom and left/right padding respectively */
+    width: 100%;
+    height: 100px;
+    box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+}
+
+.logo {
+    text-align: left;
+    color: #f1b21f;
+    flex-shrink: 0;
+    margin-right: auto;
+    /* This pushes the logo to the left */
+    margin-left: 20px;
+}
+
+.logo h1 {
+    margin: 0;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+.logo p {
+    margin: 0;
+    font-size: 12px;
+    color: #999;
+    font-family: "Segoe UI", Roboto, Arial, sans-serif;
+    font-weight: bold;
+}
+
+.search-wrapper {
+    display: flex;
+    align-items: center;
+    background-color: #f3f3f5;
+    /* Light grey background from your image */
+    padding: 12px 20px;
+    border-radius: 12px;
+    /* Soft rounded corners */
+    width: 100%;
+    max-width: 400px;
+    transition: background-color 0.2s ease;
+}
+
+.search-wrapper:focus-within {
+    background-color: #e9ecef;
+    /* Slightly darker on click/focus */
+    outline: 2px solid #D8C9A7;
+    /* Accessibility: show focus state */
+}
+
+.search-icon {
+    color: #747d8c;
+    /* Muted icon color */
+    margin-right: 12px;
+    flex-shrink: 0;
+    /* Prevents icon from squishing */
+}
+
+input {
+    border: none;
+    background: transparent;
+    /* Blend into the wrapper */
+    outline: none;
+    width: 100%;
+    font-size: 18px;
+    /* Large, readable text */
+    color: #2f3542;
+}
+
+input::placeholder {
+    color: #a4b0be;
+    /* Muted placeholder text */
+}
+
+.buttons {
+    text-align: right;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: auto;
+    /* This pushes the buttons to the right */
+    margin-right: 20px;
+    /* Optional: Adds some space from the right edge */
+
+}
+
+.buttons button {
+    padding: 8px 16px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    background-color: #5D3A2C;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.buttons button:first-child {
+    background-color: #5D3A2C;
+    color: white;
+    border: none;
+}
+
+.buttons button:first-child:hover {
+    background-color: #3D261D;
+    font-weight: bolder;
+}
+
+.buttons button:last-child {
+    background-color: #5D3A2C;
+    color: white;
+}
+
+.buttons button:last-child:hover {
+    background-color: #3D261D;
+    font-weight: bolder;
+}
+
+/* "." targets only classes */
+/* .main
+    {
+    background-color: rgb(245, 69, 69);
+    height: 100px;
+    width: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+} */
+
+/* .wallpapers {
+    background-color: none;
+    z-index: 100;
+} */
+
+.FvLtst {
+    display: flex;
+    justify-content: right;
+    margin-right: 20px;
+    gap: 20px;
+}
+
+.Latact {
+    font-size: 18px;
+    font-weight: bold;
+    font-family: "Segoe UI", Roboto, Arial, sans-serif;
+    color: #5D3A2C;
+}
+
+.Latact.active {
+    color: #e1a10a;
+}
+
+h1 {
+    color: #ffca4d;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: "Segoe UI", Roboto, Arial, sans-serif;
+    text-align: center;
+}
+
+p {
+    color: #999;
+    font-size: 18px;
+    font-weight: normal;
+    font-family: "Segoe UI", Roboto, Arial, sans-serif;
+    text-align: center;
+}
+
+.categories-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.category {
+    display: inline-block;
+    background-color: #f3f3f5;
+    border: 1px solid rgb(207, 206, 206);
+    border-radius: 12px;
+    color: rgb(102, 101, 101);
+    padding: 4px 16px;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 3px;
+    font-family: "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+.category:hover {
+    background-color: #e1a10a;
+    color: white;
+}
+
+.category.active {
+    background-color: #e1a10a;
+    color: white;
+}
+
+
+.wallpaper-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+    margin: 15px;
+}
+
+.wallpaper-item {
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+    border-radius: 24px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.wallpaper-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+    z-index: 2;
+    position: relative;
+}
+
+.wallpaper-item img:hover {
+    transform: scale(1.1);
+    z-index: 2;
+}
+
+.wallpaper-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 60%);
+    color: rgb(245, 13, 13);
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    pointer-events: none;
+}
+
+/* NEW: This makes the overlay appear when you hover the CARD */
+.wallpaper-item:hover .wallpaper-overlay {
+    opacity: 1;
+}
+
+.wallpaper-actions {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+    z-index: 50;
+    pointer-events: auto;
+}
+
+.download-btn {
+    flex: 1;
+    background-color: #cd301f;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 14px;
+    transition: background-color 0.3s ease-in-out;
+    z-index: 1000;
+}
+
+.download-btn:hover {
+    background-color: #ec1c09;
+}
+
+.favorite-btn {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: 2px solid white;
+    width: 45px;
+    height: 45px;
+    border-radius: 20%;
+    cursor: pointer;
+    font-size: 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+.favorite-btn:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.favorite-btn.is-favorite {
+    background-color: #cd301f;
+    border-color: #cd301f;
+}
+
+a:focus-visible,
+button:focus-visible {
+    outline: 2px solid #e1a10a;
+    outline-offset: 2px;
+}
+
+.download-count {
+    font-size: 12px;
+    opacity: 0.8;
+}
+
+/* This is for the categorypage.html */
+#category-type {
+    color: #D8C9A7;
+    font-size: 24px;
+    font-weight: bold;
+    font-family: "Segoe UI", Roboto, Arial, sans-serif;
+    text-align: center;
+}
+
+.footer-content {
+    background-color: white;
+    box-shadow: 20px 10px 18px 0 rgba(0, 0, 0, 0.708);
+    min-height: 200px;
+    height: auto;
+    padding: 16px;
+}
+
+.footer-p {
+    color: rgb(105, 41, 9);
+    font-size: 18px;
+    font-weight: normal;
+    font-family: "Segoe UI", Roboto, Arial, sans-serif;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .header-content {
+        height: auto;
+        padding: 12px;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .logo {
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .logo h1 {
+        font-size: 34px;
+    }
+
+    .logo p {
+        font-size: 13px;
+    }
+
+    .search-wrapper {
+        order: 2;
+        max-width: none;
+        width: 100%;
+        padding: 10px 14px;
+    }
+
+    input {
+        font-size: 16px;
+    }
+
+    .buttons {
+        order: 3;
+        width: 100%;
+        margin: 0;
+        justify-content: center;
+        gap: 8px;
+    }
+
+    .buttons button {
+        padding: 8px 12px;
+        font-size: 13px;
+        min-width: 76px;
+    }
+
+    .FvLtst {
+        justify-content: center;
+        margin-right: 0;
+        gap: 14px;
+        flex-wrap: wrap;
+    }
+
+    .Latact {
+        font-size: 16px;
+    }
+
+    h1 {
+        font-size: 26px;
+        padding-inline: 10px;
+    }
+
+    p {
+        font-size: 16px;
+        padding-inline: 10px;
+    }
+
+    .wallpaper-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        margin: 12px;
+    }
+
+    .wallpaper-item {
+        height: auto;
+        aspect-ratio: 4 / 5;
+    }
+
+    .footer-content {
+        box-shadow: 8px 6px 14px 0 rgba(0, 0, 0, 0.35);
+        padding: 14px;
+    }
+
+    .footer-p {
+        font-size: 15px;
+        line-height: 1.5;
+    }
+}
+
+@media (max-width: 420px) {
+    .logo h1 {
+        font-size: 28px;
+    }
+
+    .logo p {
+        font-size: 12px;
+    }
+
+    .buttons {
+        justify-content: space-between;
+    }
+
+    .buttons a {
+        flex: 1;
+    }
+
+    .buttons button {
+        width: 100%;
+    }
+
+    .Latact {
+        font-size: 15px;
+    }
+}

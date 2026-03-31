@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-In Page</title>
+    <link rel="stylesheet" href="../STYLESHEETS/signin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <br>
+    <h2 id="back-link"><a href="index.html"> &#8592</a> Back to Homepage</h2>
+    <div class="mainSignIn">
+        <div class="signIn">
+            <form action="/SignIn" method="post">
+                <label id="lg"> LOG IN</label>
+                <br>
+                <div class="social-media-icons">
+                    <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-google"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+                <p>or use your email account</p>
+                <br>
+                <label>
+                    Email:
+                    <input type="email" name="email" placeholder="eg:abc@gmail.com" required>
+                </label>
+                <br>
+                <label>
+                    Password:
+                    <input type="password" name="password" placeholder="Password" required>
+                </label>
+
+                <span class="forgot-password"><a href="#">Forgot Password?</a></span>
+                <br>
+                <button class="signIn-btn" type="submit"><b>SIGN IN</b></button>
+            </form>
+        </div>
+        <br><br>
+        <div class="signUp">
+            <form action="signInPage.html" method="post">
+                <Label> SIGN UP</Label>
+                <div class="social-media-icons">
+                    <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-google"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+                <p>or use your email for registration</p>
+                <label>
+                    Full Names:
+                    <input type="text" name="First Name" placeholder="eg: Caleb Osei" required>
+                </label>
+                <br>
+                <label>
+                    Email:
+                    <input type="email" name="email" placeholder="eg:abc@gmail.com" required>
+                </label>
+                <br>
+                <label>
+                    Password:
+                    <input type="password" name="Password" placeholder="Password" required>
+                </label>
+                <br>
+
+                <button class="signUp-btn" type="submit"><b>SIGN UP</b></button>
+            </form>
+        </div>
+        <div class="toggle-container">
+            <div class="toggle">
+                <div class="toggle-panel toggle-right">
+                    <h2>New Here?</h2>
+                    <p>Sign up and discover a great amount of new opportunities!</p>
+                    <button id="signUp-btn" class="hidden">SIGN UP</button>
+                </div>
+                <div class="toggle-panel toggle-left">
+                    <h2>One of us?</h2>
+                    <p>If you already have an account, just sign in. We've missed you!</p>
+                    <button id="signIn-btn" class="hidden">SIGN IN</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../JAVASCRIPTS/index.js"></script>
+</body>
+
+</html>

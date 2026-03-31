@@ -1,0 +1,73 @@
+These are the styling properties of a div:
+1. The Box Model (Spacing & Size)
+These properties define the physical space the div takes up: 
+
+width & height: Sets the dimensions of the box (e.g., width: 300px; or height: 50%).
+
+padding: Creates space inside the div, between the content and the border.
+
+margin: Creates space outside the div to push other elements away.
+
+border: Adds a line around the div. You can set its width, style (solid, dashed), and color. 
+
+
+2. Layout & Positioning
+These control where the div sits on the page and how it behaves: 
+
+display: The most important layout property.
+
+block: (Default) Takes up the full width.
+
+flex: Turns the div into a Flexbox container to easily align items inside it.
+
+grid: Creates a complex grid-based layout.
+
+none: Completely removes the div from view.
+
+position: Used for precise placement (e.g., relative, absolute, fixed, or sticky).
+
+z-index: Controls the "stacking order" if divs overlap (higher numbers sit on top).
+
+overflow: Decides what happens if content is too big for the div (e.g., scroll, hidden, or auto). 
+
+
+3. Visuals & Background
+These make the "invisible box" look like something: 
+
+background-color: Fills the box with a solid color.
+
+background-image: Places an image or gradient inside the div.
+
+border-radius: Rounds the corners of the box. Use 50% to turn a square div into a circle.
+
+box-shadow: Adds a shadow effect to give the div depth and make it look "lifted".
+
+opacity: Sets the transparency level (0 is invisible, 1 is solid). 
+
+
+4. Text Content (Inside the Div)
+If you put text inside your div, these properties are used to style it: 
+
+color: Sets the text color.
+
+font-family & font-size: Sets the font type and size.
+
+text-align: Aligns text to the left, right, center, or justify.
+
+justify-content: center;: Align along the main axis (Left/Right).
+
+align-items: center;: Align along the cross axis (Up/Down).
+
+
+TO WORK on
+Tool tips
+When i click on the picture it is supposed to come out big like a window or something 
+Terms of Sercive
+Policy
+Landing page vrs homepage 
+Colors 
+Favorites
+Contact 
+Latest 
+Search functions
+
