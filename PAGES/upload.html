@@ -1,44 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Upload a wallpaper</title>
     <link rel="stylesheet" href="../STYLESHEETS/upload.css">
 </head>
-
 <body>
-    <h2 id="back-link"><a href="index.html"> &#8592</a> Back to Homepage</h2>
-    <div class="container">
-        <h1>Upload a Wallpaper</h1>
+<a href="landingPage.html" class="back-link"> <span class="back-text">&#10094;Back to Homepage</span></a>
+<div class="container">
+    
+    <h1>Upload a Wallpaper</h1>
+    <form>
+        <label>Select an image to upload:</label>
+        <input type="file">
 
-        <form action="/upload" method="post" enctype="multipart/form-data">
-            <label class="selection">
-                Select an image to upload:
-                <input type="file" name="wallpaper" accept="image/*" required>
-            </label>
-            <br>
-            <p>
-                Choose a category for the upload:<br>
-                <input type="radio" id="nature" name="category" class="category-option" value="nature">Nature<br>
-                <input type="radio" id="abstract" name="category" class="category-option" value="abstract">Abstract<br>
-                <input type="radio" id="city" name="category" class="category-option" value="city">City<br>
-                <input type="radio" id="space" name="category" class="category-option" value="space">Space<br>
-                <input type="radio" id="minimal" name="category" class="category-option" value="minimal">Minimal<br>
-                <input type="radio" id="animals" name="category" class="category-option" value="animals">Animals<br>
-                <input type="radio" id="oceans" name="category" class="category-option" value="oceans">Oceans<br>
-                <input type="radio" id="mountains" name="category" class="category-option"
-                    value="mountains">Mountains<br>
-                <input type="radio" id="deserts" name="category" class="category-option" value="deserts">Deserts<br>
-                <input type="radio" id="others" name="category" class="category-option" value="others">Others
-            </p>
-            <br>
-            <button id="Reset" type="reset">Reset</button>
-            <br><br>
-            <button id="Upload" type="submit">Upload</button>
-        </form>
-    </div>
+        <p>Choose a category:</p>
+        <div class="category-group">
+            <label class="category-option"><input type="radio" name="cat"> Nature</label><br>
+            <label class="category-option"><input type="radio" name="cat"> Abstract</label><br>
+            <label class="category-option"><input type="radio" name="cat"> City</label><br>
+            <label class="category-option"><input type="radio" name="cat"> Space</label><br>
+            <label class="category-option"><input type="radio" name="cat"> Minimal</label><br>
+            <label class="category-option"><input type="radio" name="cat"> Animals</label><br>
+            <label class="category-option"><input type="radio" name="cat"> Oceans</label><br>
+            <label class="category-option"><input type="radio" name="cat"> Mountains</label><br>    
+            <label class="category-option"><input type="radio" name="cat"> Deserts</label><br>
+            </div>
+
+            <button type="reset" class="reset">Reset</button>
+
+        <button type="submit">Upload</button>
+    </form>
+</div>
+
+    
 </body>
-
 </html>

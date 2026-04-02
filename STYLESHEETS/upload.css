@@ -1,66 +1,51 @@
 
-* {
+body {
     margin: 0;
     padding: 0;
-    list-style-type: none;
-    text-decoration: none;
-    box-sizing: border-box;
-    /* line-height: 1.75rem; */
-}
-
-body {
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    font-family:"Segoe UI", Roboto, Arial, sans-serif;
-     background-image:url(a.jpg);
-     background-attachment: fixed;
-     background-size: cover;
-     background-position: center;
+   
+    background-image: url(a.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Segoe UI', sans-serif;
 }
 
 
 .container {
-    margin-top: 100px;
-    margin-bottom: 100px;
+    background: rgba(255, 255, 255, 0.15); 
     backdrop-filter: blur(15px);           
-    -webkit-backdrop-filter: blur(15px);   
+    -webkit-backdrop-filter: blur(15px);  
+    
     border: 1px solid rgba(255, 255, 255, 0.2); 
     border-radius: 20px;
     padding: 40px;
     width: 100%;
     max-width: 400px;
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-    
+    color: #ffffff; 
 }
 
-h1,p {
-    margin-top:10px;
+
+h1 {
+    margin-top: 0;
     font-weight: 600;
     text-shadow: 0 2px 4px rgba(0,0,0,0.2);
-    color: white;
+    font-weight: cursive;
+    color: orangered;
     font-style: italic;
 }
 
-.selection{
-    color:orangered;
+.category-option {
+    color: rgba(255, 255, 255, 0.9);
+    margin: 5px 0;
 }
 
-#Reset {
- background-color: rgb(246, 4, 4);
-    border: none;
-    color: white;
-    padding: 9px;
-    border-radius:10px;
-    width: 20%;
-    cursor: pointer;
-    font-weight: bold;
-    transition: 0.3s;
-}
-
-#Upload {
-    background-color:rgb(250, 98, 3;
+/* The Upload Button */
+button {
+    background: rgba(203, 60, 3, 0.541);
     border: none;
     color: white;
     padding: 12px;
@@ -72,31 +57,40 @@ h1,p {
     margin-top: 20px;
 }
 
-#Upload:hover {
-    background-color: orangered;
+button:hover {
+    background: rgb(250, 98, 3);
     transform: translateY(-2px);
 }
-
-#back-link {
-    color: #db9900;
-    font-weight: bold;
-    text-decoration:none;
-    font-size: 14px;
-    transition: color 0.3s;
+.back-link {
     position: absolute;
     top: 20px;
     left: 20px;
     z-index: 10;
     
 }
+.back-text {
+    color: #D8C9A7;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s;
     
+}
 input[type="file"] {
     margin-top: 20px;
-    color: rgba(119, 13, 13, 0.9);
-    border-radius:none;
+    color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
     color:orangered;
 }
-
-input[type="radio"] {
-    margin:5px;
+.reset {
+    background: rgba(255, 255, 255, 0.3);
+    border: none;
+    color: white;
+    padding: 12px;
+    border-radius:10px;
+    width: 30%;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+    margin-top: 10px;
 }
