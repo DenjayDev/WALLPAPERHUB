@@ -9,9 +9,10 @@
 
 body {
     width: 100%;
-    background-color: #c0c0c3;
+    background-image:url(a.jpg);
     background-size: cover;
     background-position: center;
+    background-attachment: fixed;
 }
 
 .header-content {
