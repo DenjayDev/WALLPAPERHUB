@@ -1,27 +1,36 @@
 *{
    margin: 0;
     padding: 0;
+    box-sizing: border-box;
     
 }
 
 .main{
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
    background: linear-gradient(to top, rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../ASSETS/a.jpg); ;
   
    background-position: center;
    background-attachment: fixed;
    background-size: cover;
    font-family: sans-serif;
+   position: relative;
+   overflow-x: hidden;
 }
 .navbar{
-   width:95%;
-   height: auto;
-   margin-left: 30px;
-    
+   width: min(1200px, 100%);
+   min-height: 100px;
+   margin: 0 auto;
+   padding: 0 24px;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   gap: 18px;
+   flex-wrap: wrap;
+}
 
-   
-    
+.logo-container {
+    flex: 0 0 auto;
 }
 
 .nav-logo{ 
@@ -42,26 +51,28 @@
     
 
 .menu{
-    width: 600px;
-    float: left;
-    height:70px;
+    flex: 1 1 0;
+    min-width: 0;
+    height:auto;
 }
-ul{
-    float: left;
+.menu > ul{
     display:flex;
-    padding-top: 30px;
+    flex-wrap: wrap;
     justify-content:center;
     align-items: center;
-    margin-left: 14px;
+    gap: 18px 28px;
+    padding-top: 0;
+    justify-content:center;
+    align-items: center;
+    margin-left: 0;
 
 }
-ul li{
+.menu > ul li{
     list-style: none;
-    margin-left: 60px;
     font-size: 16px;
     
 }
-ul li a{
+.menu > ul li a{
     text-decoration: none;
     color: rgba(255, 255, 255, 0.573);
     font-family: Arial, Helvetica, sans-serif;
@@ -73,28 +84,51 @@ ul li a{
     transition: 0.3s ease;
 
 }
-ul li a i{
+
+.dropdown-toggle {
+    border: none;
+    background: transparent;
+    color: rgba(255, 255, 255, 0.573);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.dropdown-toggle i {
     font-size: 1.2rem;
 }
-ul li a:hover{
+
+.dropdown-toggle:hover,
+.dropdown-toggle:focus-visible {
+    color:#ff7200;
+    transform: translateY(-3px);
+}
+
+.menu > ul li a i{
+    font-size: 1.2rem;
+}
+.menu > ul li a:hover{
     color:#ff7200 ;
      transform: translateY(-3px);
 }
 .search-box{
-    float:right;
-    width:300px;
+    flex: 0 1 320px;
+    width: 100%;
+    max-width: 320px;
     background: rgba(255, 255, 255, 0.167);
     height: 30px;
     padding: 8px;
     border-radius: 15px;
-    margin-top: 18px;
-    margin-right: -1%;
+    margin-top: 0;
+    margin-right: 0;
     border: 1px solid,#f8f7f741 ;
     color: var(--text-primary);
-    transition: var(--transition)
-
-
-
+    transition: var(--transition);
 }
 .search-box:focus-within{
 border:1px solid rgba(225, 125, 11, 0.975);
@@ -102,7 +136,7 @@ box-shadow: #ff7200;
 
 }
 .search-box .search-text{
-    width:250px;
+    width: calc(100% - 30px);
     padding: 0 6px;
 }
 .search-btn{
@@ -145,6 +179,7 @@ hr{
     text-align: center;
     color: #fff;
     padding: 0 20px;
+        width: min(92vw, 900px);
     
 }
 .heading{
@@ -170,7 +205,8 @@ hr{
 }
 
 .btn {
-  margin: 100px;
+    margin: 2rem auto 0;
+    display: inline-block;
   padding: 15px 40px;
   border: none;
   outline: none;
@@ -239,7 +275,7 @@ hr{
 
 /* 1. Position the parent relative so the menu stays attached to it */
 .dropdown {
-    position: relative;
+    display: none;
     display: inline-block;
 }
 
@@ -249,6 +285,8 @@ hr{
     display: none;
     position: absolute;
     top: 100%;       
+    flex-direction: column;
+    align-items: stretch;
     left: 50%;        
     transform: translateX(-50%); 
     min-width: 180px;
@@ -265,6 +303,10 @@ hr{
 .dropdown:hover .dropdown-menu {
     display: block;  
     
+}
+
+.dropdown:focus-within .dropdown-menu {
+    display: block;
 }
 
 
@@ -298,4 +340,99 @@ hr{
 .wall:hover{
     color:#fff;
     
+}
+
+@media (max-width: 1024px) {
+    .navbar {
+        justify-content: center;
+        padding-top: 16px;
+    }
+
+    .menu,
+    .search-box {
+        width: 100%;
+        max-width: 100%;
+        flex-basis: 100%;
+    }
+
+    .search-box {
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .main {
+        min-height: 100dvh;
+        background-attachment: scroll;
+    }
+
+    .navbar {
+        min-height: auto;
+        padding: 14px 16px 0;
+        gap: 12px;
+    }
+
+    .nav-logo {
+        height: 76px;
+        margin-left: 0;
+    }
+
+    .menu > ul {
+        gap: 10px 14px;
+    }
+
+    .dropdown-menu {
+        position: static;
+        left: auto;
+        transform: none;
+        min-width: 100%;
+        margin-top: 8px;
+    }
+
+    .content {
+        position: static;
+        transform: none;
+        top: auto;
+        left: auto;
+        margin: 3rem auto 0;
+        padding: 0 16px 32px;
+        width: 100%;
+    }
+
+    .heading {
+        font-size: clamp(2.8rem, 14vw, 4.2rem);
+        line-height: 1.05;
+    }
+
+    .paragraph {
+        font-size: 1rem;
+    }
+
+    .btn {
+        padding: 12px 28px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        padding-inline: 12px;
+    }
+
+    .menu > ul {
+        gap: 8px 12px;
+    }
+
+    .menu > ul li a,
+    .dropdown-toggle {
+        font-size: 14px;
+    }
+
+    .search-box {
+        padding: 8px 12px;
+    }
+
+    .search-text,
+    input::placeholder {
+        font-size: 14px;
+    }
 }

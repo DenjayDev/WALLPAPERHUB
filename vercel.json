@@ -7,6 +7,42 @@
         {
             "source": "/index.html",
             "destination": "/PAGES/index.html"
+        },
+        {
+            "source": "/homepage.html",
+            "destination": "/PAGES/homepage.html"
+        },
+        {
+            "source": "/Homepage.html",
+            "destination": "/PAGES/homepage.html"
+        },
+        {
+            "source": "/categorypage.html",
+            "destination": "/PAGES/categorypage.html"
+        },
+        {
+            "source": "/contact.html",
+            "destination": "/PAGES/contact.html"
+        },
+        {
+            "source": "/upload.html",
+            "destination": "/PAGES/upload.html"
+        },
+        {
+            "source": "/signInPage.html",
+            "destination": "/PAGES/signInPage.html"
+        },
+        {
+            "source": "/About-us.html",
+            "destination": "/PAGES/About-us.html"
+        },
+        {
+            "source": "/Privacy%20&%20Policy.html",
+            "destination": "/PAGES/Privacy & Policy.html"
+        },
+        {
+            "source": "/Terms%20of%20use.html",
+            "destination": "/PAGES/Terms of use.html"
         }
     ]
 }
