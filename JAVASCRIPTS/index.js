@@ -1,23 +1,32 @@
-// window.alert("You are welcome to our wallpaperhub website.");
-// 1. Select the main container that will slide
-const mainContainer = document.querySelector('.mainSignIn');
+document.addEventListener("DOMContentLoaded", () => {
+    const searchInput = document.getElementById("site-search");
+    const searchButton = document.querySelector(".search-btn");
 
-// 2. Select the toggle buttons using the IDs from your HTML
-// Note: If you have two elements with the same ID, JS picks the first one.
-const signUpToggle = document.getElementById('signUp-btn');
-const signInToggle = document.getElementById('signIn-btn');
+    if (!searchInput || !searchButton) {
+        return;
+    }
 
-if (mainContainer && signUpToggle && signInToggle) {
-    // 3. Add the logic to slide to the "Sign Up" side
-    signUpToggle.addEventListener('click', (e) => {
-        // This prevents the page from refreshing/submitting
-        e.preventDefault();
-        mainContainer.classList.add("active");
+    const runSearch = () => {
+        const query = searchInput.value.trim();
+
+        if (!query) {
+            window.location.href = "homepage.html";
+            return;
+        }
+
+        const params = new URLSearchParams({ q: query });
+        window.location.href = `homepage.html?${params.toString()}`;
+    };
+
+    searchButton.addEventListener("click", (event) => {
+        event.preventDefault();
+        runSearch();
     });
 
-    // 4. Add the logic to slide back to the "Sign In" side
-    signInToggle.addEventListener('click', (e) => {
-        e.preventDefault();
-        mainContainer.classList.remove("active");
+    searchInput.addEventListener("keydown", (event) => {
+        if (event.key === "Enter") {
+            event.preventDefault();
+            runSearch();
+        }
     });
-}
+});

@@ -1,0 +1,301 @@
+*{
+   margin: 0;
+    padding: 0;
+    
+}
+
+.main{
+    width: 100%;
+    height: 100vh;
+   background: linear-gradient(to top, rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../ASSETS/a.jpg); ;
+  
+   background-position: center;
+   background-attachment: fixed;
+   background-size: cover;
+   font-family: sans-serif;
+}
+.navbar{
+   width:95%;
+   height: auto;
+   margin-left: 30px;
+    
+
+   
+    
+}
+
+.nav-logo{ 
+    height: 100px; /* Increase this number to make the logo bigger */
+    width: auto;
+    margin-left: -10px; /* This "pulls" the logo further to the left */
+    margin-right: 5px;
+    object-fit: contain;
+    float: left;
+    padding-top: .6px;
+    cursor: pointer;
+    
+    /* Using the blend mode again to hide that white/gray background box */
+    mix-blend-mode: screen;
+}
+
+   
+    
+
+.menu{
+    width: 600px;
+    float: left;
+    height:70px;
+}
+ul{
+    float: left;
+    display:flex;
+    padding-top: 30px;
+    justify-content:center;
+    align-items: center;
+    margin-left: 14px;
+
+}
+ul li{
+    list-style: none;
+    margin-left: 60px;
+    font-size: 16px;
+    
+}
+ul li a{
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.573);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    white-space: nowrap;
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    transition: 0.3s ease;
+
+}
+ul li a i{
+    font-size: 1.2rem;
+}
+ul li a:hover{
+    color:#ff7200 ;
+     transform: translateY(-3px);
+}
+.search-box{
+    float:right;
+    width:300px;
+    background: rgba(255, 255, 255, 0.167);
+    height: 30px;
+    padding: 8px;
+    border-radius: 15px;
+    margin-top: 18px;
+    margin-right: -1%;
+    border: 1px solid,#f8f7f741 ;
+    color: var(--text-primary);
+    transition: var(--transition)
+
+
+
+}
+.search-box:focus-within{
+border:1px solid rgba(225, 125, 11, 0.975);
+box-shadow: #ff7200;
+
+}
+.search-box .search-text{
+    width:250px;
+    padding: 0 6px;
+}
+.search-btn{
+    text-decoration: none;
+    background-color:transparent;
+    color: black;
+    display: flex;
+    float: right;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height:30px ;
+}
+.search-text{
+    border: none;
+    background: none;
+    outline: none;
+    float:left;
+    color: rgb(14, 14, 14);
+    font-size: 16px;
+    line-height: 30px;
+    letter-spacing: .6px;
+}
+input::placeholder{
+    color: rgb(18, 11, 11);
+    font-size: 16px;
+    line-height: 30px;
+    letter-spacing: .6px;
+}
+hr{
+    border: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.167);
+    margin: 20px 0;
+}
+.content{
+  position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    padding: 0 20px;
+    
+}
+.heading{
+    cursor: pointer;
+    font-family: cursive;
+    color:#fff ;
+    font-size:85px ;
+    transition: 0.4s ease-out;
+
+}
+.heading:hover{
+    color: #f04d07;
+
+}
+.paragraph{
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color:rgba(255, 255, 255, 0.815); 
+   
+    margin-bottom: 30px;
+    font-weight: 300;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.btn {
+  margin: 100px;
+  padding: 15px 40px;
+  border: none;
+  outline: none;
+  color:#ff7e00;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 12px;
+  text-decoration: none;
+}
+.btn::after {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #180a23;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+  box-shadow: 0 0 5px #ff7e00, 0 0 10px #ff7e00, 0 0 20px #ff7e00, 0 0 40px #ff7e00;
+}
+/* glow */
+.btn::before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #f2ff00, #2b0057, #1a1a2e, #9500ff,
+    #2b0057, #2b0057, #e60606, #005eff
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 600%;
+  z-index: -1;
+  width: calc(100% + 4px);
+  height:  calc(100% + 4px);
+  filter: blur(8px);
+  animation: glowing 20s linear infinite;
+  transition: opacity .3s ease-in-out;
+  border-radius: 10px;
+  opacity: 0;
+}
+
+@keyframes glowing {
+  0% {background-position: 0 0;}
+  50% {background-position: 400% 0;}
+  100% {background-position: 0 0;}
+}
+
+/* hover */
+.btn:hover::before {
+  opacity: 1;
+ 
+}
+
+.btn:active:after {
+  background: transparent;
+  
+}
+
+.btn:active {
+  color: #000;
+  font-weight: bold;
+}
+
+/* 1. Position the parent relative so the menu stays attached to it */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* 2. Style the dropdown menu (hidden by default) */
+.dropdown-menu {
+    
+    display: none;
+    position: absolute;
+    top: 100%;       
+    left: 50%;        
+    transform: translateX(-50%); 
+    min-width: 180px;
+    padding: 10px 0;
+    list-style: none;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.591);
+    
+   
+  
+}
+
+
+.dropdown:hover .dropdown-menu {
+    display: block;  
+    
+}
+
+
+.dropdown-menu li a {
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: block;       
+    font-size: 14px;
+    gap: 3px;
+    flex-direction: column;
+   gap: 8px;
+    
+}
+
+.dropdown-menu li a:hover {
+    background-color: #ff7300; /*
+     Matches your brand orange */
+     color: white;
+}
+
+/* Hover effect for the items */
+.dropdown-menu li a:hover {
+    background: rgba(255, 115, 0, 0.2); /* Subtle orange tint on hover */
+    color: #ffffff;
+}
+.wall{
+    color: #f04d07;
+    transition: 0.4s ease-out;
+}
+.wall:hover{
+    color:#fff;
+    
+}

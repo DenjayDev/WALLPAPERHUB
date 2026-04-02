@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>wallpaperhub</title>
+    <link rel="stylesheet" href="../STYLESHEETS/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="header-content">
+            <div class="logo">
+                <h1>WallpaperHub</h1>
+                <p>Discover Beautiful Wallpapers</p>
+            </div>
+            <div class="search-wrapper">
+                <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+                <input id="wallpaper-search" type="search" placeholder="Search wallpapers (eg. animals, oceans...)"
+                    aria-label="Search wallpapers">
+            </div>
+            <div class="buttons">
+                <a href="../PAGES/upload.html">
+                    <button class="Upload">Upload</button> <!-- First-child -->
+                </a>
+                <a href="../PAGES/signInPage.html">
+                    <button class="Sign-In">Sign In</button> <!-- Second-child -->
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="site-content">
+        <section class="wallpapers">
+            <!-- all wallpaper related content will go here, the section is more like a div but slightly different -->
+            <div class="FvLtst">
+                <a id="favorites-link" class="Latact" href="#wallpaper-grid">Favorites</a>
+                <a class="Latact" href="#wallpaper-grid">Latest</a>
+                <a class="Latact" href="../PAGES/contact.html">Contact</a>
+                <!--The hash tag is used to make the link remain on the same page but navigate to the footer -->
+            </div>
+            <br><br>
+            <h1>Explore Premium Wallpapers</h1>
+            <p>Discover thousands of high-quality wallpapers for your devices </p>
+
+            <br>
+            <h1>Categories</h1>
+            <br>
+            <div class="categories-container">
+
+                <a href="homepage.html" class="category">All</a>
+                <a href="../PAGES/categorypage.html?category=nature" class="category">Nature</a>
+                <a href="../PAGES/categorypage.html?category=abstract" class="category">Abstract</a>
+                <a href="../PAGES/categorypage.html?category=city" class="category">City</a>
+                <a href="../PAGES/categorypage.html?category=space" class="category">Space</a>
+                <a href="../PAGES/categorypage.html?category=minimal" class="category">Minimal</a>
+                <a href="../PAGES/categorypage.html?category=animals" class="category">Animals</a>
+                <a href="../PAGES/categorypage.html?category=oceans" class="category">Oceans</a>
+                <a href="../PAGES/categorypage.html?category=mountains" class="category">Mountains</a>
+                <a href="../PAGES/categorypage.html?category=deserts" class="category">Deserts</a>
+            </div>
+
+            <br>
+
+            <div class="wallpaper-grid" id="wallpaper-grid">
+                <div class="wallpaper-item">
+                    <img src="../IMAGES/OCEANS/oc1.jpg" alt="Ocean waves wallpaper">
+                    <div class="wallpaper-overlay">
+                        <div class="wallpaper-actions">
+                            <a href="../IMAGES/OCEANS/oc1.jpg" download> <button class="download-btn">⬇
+                                    Download</button></a>
+                            <button class="favorite-btn">♡</button>
+                        </div>
+                        <span class="download-count">2,451 downloads</span>
+                    </div>
+                </div>
+                <div class="wallpaper-item">
+                    <img src="../IMAGES/OCEANS/oc2.jpg" alt="Blue ocean wallpaper">
+                    <div class="wallpaper-overlay">
+                        <div class="wallpaper-actions">
+                            <a href="../IMAGES/OCEANS/oc2.jpg" download><button class="download-btn">⬇
+                                    Download</button></a>
+                            <button class="favorite-btn">♡</button>
+                        </div>
+                        <span class="download-count">3,124 downloads</span>
+                    </div>
+                </div>
+                <div class="wallpaper-item">
+                    <img src="../IMAGES/DESERTS/des3.png" alt="Desert dunes wallpaper">
+                    <div class="wallpaper-overlay">
+                        <div class="wallpaper-actions">
+                            <a href="../IMAGES/DESERTS/des3.png" download><button class="download-btn">⬇
+                                    Download</button></a>
+                            <button class="favorite-btn">♡</button>
+                        </div>
+                        <span class="download-count">1,892 downloads</span>
+                    </div>
+                </div>
+                <div class="wallpaper-item">
+                    <img src="../IMAGES/DESERTS/des19.jpg" alt="Golden desert landscape wallpaper">
+                    <div class="wallpaper-overlay">
+                        <div class="wallpaper-actions">
+                            <a href="../IMAGES/DESERTS/des19.jpg" download><button class="download-btn">⬇
+                                    Download</button></a>
+                            <button class="favorite-btn">♡</button>
+                        </div>
+                        <span class="download-count">4,567 downloads</span>
+                    </div>
+                </div>
+                <div class="wallpaper-item">
+                    <img src="../IMAGES/MOUNTAINS/mount1.jpg" alt="Mountain peak wallpaper">
+                    <div class="wallpaper-overlay">
+                        <div class="wallpaper-actions">
+                            <a href="../IMAGES/MOUNTAINS/mount1.jpg" download><button class="download-btn">⬇
+                                    Download</button></a>
+                            <button class="favorite-btn">♡</button>
+                        </div>
+                        <span class="download-count">4,567 downloads</span>
+                    </div>
+                </div>
+                <div class="wallpaper-item">
+                    <img src="../IMAGES/MOUNTAINS/mount2.jpg" alt="Misty mountain wallpaper">
+                    <div class="wallpaper-overlay">
+                        <div class="wallpaper-actions">
+                            <a href="../IMAGES/MOUNTAINS/mount2.jpg" download><button class="download-btn">⬇
+                                    Download</button></a>
+                            <button class="favorite-btn">♡</button>
+                        </div>
+                        <span class="download-count">4,567 downloads</span>
+                    </div>
+                </div>
+                <div class="wallpaper-item">
+                    <img src="../IMAGES/MINIMALS/min15.jpg" alt="Minimal art wallpaper 15">
+                    <div class="wallpaper-overlay">
+                        <div class="wallpaper-actions">
+                            <a href="../IMAGES/MINIMALS/min15.jpg" download><button class="download-btn">⬇
+                                    Download</button></a>
+                            <button class="favorite-btn">♡</button>
+                        </div>
+                        <span class="download-count">4,567 downloads</span>
+                    </div>
+                </div>
+                <div class="wallpaper-item">
+                    <img src="../IMAGES/MINIMALS/min5.jpg" alt="Minimal art wallpaper 5">
+                    <div class="wallpaper-overlay">
+                        <div class="wallpaper-actions">
+                            <a href="../IMAGES/MINIMALS/min5.jpg" download><button class="download-btn">⬇
+                                    Download</button></a>
+                            <button class="favorite-btn">♡</button>
+                        </div>
+                        <span class="download-count">4,567 downloads</span>
+                    </div>
+                </div>
+                <div class="wallpaper-item">
+                    <img src="../IMAGES/SPACE/spc10.jpg" alt="Space nebula wallpaper">
+                    <div class="wallpaper-overlay">
+                        <div class="wallpaper-actions">
+                            <a href="../IMAGES/SPACE/spc10.jpg" download><button class="download-btn">⬇
+                                    Download</button></a>
+                            <button class="favorite-btn">♡</button>
+                        </div>
+                        <span class="download-count">4,567 downloads</span>
+                    </div>
+                </div>
+                <div class="wallpaper-item">
+                    <img src="../IMAGES/SPACE/spc3.jpg" alt="Stars in space wallpaper">
+                    <div class="wallpaper-overlay">
+                        <div class="wallpaper-actions">
+                            <a href="../IMAGES/SPACE/spc3.jpg" download><button class="download-btn">⬇
+                                    Download</button></a>
+                            <button class="favorite-btn">♡</button>
+                        </div>
+                        <span class="download-count">4,567 downloads</span>
+                    </div>
+                </div>
+                <div class="wallpaper-item">
+                    <img src="../IMAGES/ABSTRACT/abs6.jpg" alt="Abstract color flow wallpaper">
+                    <div class="wallpaper-overlay">
+                        <div class="wallpaper-actions">
+                            <a href="../IMAGES/ABSTRACT/abs6.jpg" download><button class="download-btn">⬇
+                                    Download</button></a>
+                            <button class="favorite-btn">♡</button>
+                        </div>
+                        <span class="download-count">4,567 downloads</span>
+                    </div>
+                </div>
+                <div class="wallpaper-item">
+                    <img src="../IMAGES/ABSTRACT/abs7.jpg" alt="Abstract geometric wallpaper">
+                    <div class="wallpaper-overlay">
+                        <div class="wallpaper-actions">
+                            <a href="../IMAGES/ABSTRACT/abs7.jpg" download><button class="download-btn">⬇
+                                    Download</button></a>
+                            <button class="favorite-btn">♡</button>
+                        </div>
+                        <span class="download-count">4,567 downloads</span>
+                    </div>
+                </div>
+                <div class="wallpaper-item">
+                    <img src="../IMAGES/NATURE/nat1.jpeg" alt="Green nature wallpaper">
+                    <div class="wallpaper-overlay">
+                        <div class="wallpaper-actions">
+                            <a href="../IMAGES/NATURE/nat1.jpeg" download><button class="download-btn">⬇
+                                    Download</button></a>
+                            <button class="favorite-btn">♡</button>
+                        </div>
+                        <span class="download-count">4,567 downloads</span>
+                    </div>
+                </div>
+                <div class="wallpaper-item">
+                    <img src="../IMAGES/CITIES/city1.jpg" alt="City skyline wallpaper">
+                    <div class="wallpaper-overlay">
+                        <div class="wallpaper-actions">
+                            <a href="../IMAGES/CITIES/city1.jpg" download><button class="download-btn">⬇
+                                    Download</button></a>
+                            <button class="favorite-btn">♡</button>
+                        </div>
+                        <span class="download-count">4,567 downloads</span>
+                    </div>
+                </div>
+                <div class="wallpaper-item">
+                    <img src="../IMAGES/CITIES/city16.jpg" alt="Urban city lights wallpaper">
+                    <div class="wallpaper-overlay">
+                        <div class="wallpaper-actions">
+                            <a href="../IMAGES/CITIES/city16.jpg" download><button class="download-btn">⬇
+                                    Download</button></a>
+                            <button class="favorite-btn">♡</button>
+                        </div>
+                        <span class="download-count">4,567 downloads</span>
+                    </div>
+                </div>
+                <div class="wallpaper-item">
+                    <img src="../IMAGES/ANIMALS/an1.jpg" alt="Wildlife animal wallpaper 1">
+                    <div class="wallpaper-overlay">
+                        <div class="wallpaper-actions">
+                            <a href="../IMAGES/ANIMALS/an1.jpg" download><button class="download-btn">⬇
+                                    Download</button></a>
+                            <button class="favorite-btn">♡</button>
+                        </div>
+                        <span class="download-count">4,567 downloads</span>
+                    </div>
+                </div>
+                <div class="wallpaper-item">
+                    <img src="../IMAGES/ANIMALS/an9.jpg" alt="Wildlife animal wallpaper 17">
+                    <div class="wallpaper-overlay">
+                        <div class="wallpaper-actions">
+                            <a href="../IMAGES/ANIMALS/an9.jpg" download><button class="download-btn">⬇
+                                    Download</button></a>
+                            <button class="favorite-btn">♡</button>
+                        </div>
+                        <span class="download-count">4,567 downloads</span>
+                    </div>
+                </div>
+                <div class="wallpaper-item">
+                    <img src="../IMAGES/NATURE/nat12.jpg" alt="Nature landscape wallpaper 12">
+                    <div class="wallpaper-overlay">
+                        <div class="wallpaper-actions">
+                            <a href="../IMAGES/NATURE/nat12.jpg" download><button class="download-btn">⬇
+                                    Download</button></a>
+                            <button class="favorite-btn">♡</button>
+                        </div>
+                        <span class="download-count">4,567 downloads</span>
+                    </div>
+                </div>
+                <div class="wallpaper-item">
+                    <img src="../IMAGES/NATURE/nat6.jpg" alt="Nature landscape wallpaper 6">
+                    <div class="wallpaper-overlay">
+                        <div class="wallpaper-actions">
+                            <a href="../IMAGES/NATURE/nat6.jpg" download><button class="download-btn">⬇
+                                    Download</button></a>
+                            <button class="favorite-btn">♡</button>
+                        </div>
+                        <span class="download-count">4,567 downloads</span>
+                    </div>
+                </div>
+                <div class="wallpaper-item">
+                    <img src="../IMAGES/NATURE/nat10.jpg" alt="Nature landscape wallpaper 10">
+                    <div class="wallpaper-overlay">
+                        <div class="wallpaper-actions">
+                            <a href="../IMAGES/NATURE/nat10.jpg" download><button class="download-btn">⬇
+                                    Download</button></a>
+                            <button class="favorite-btn">♡</button>
+                        </div>
+                        <span class="download-count">4,567 downloads</span>
+                    </div>
+                </div>
+                <div class="wallpaper-item">
+                    <img src="../IMAGES/CITIES/city3.jpg" alt="Modern city wallpaper 3">
+                    <div class="wallpaper-overlay">
+                        <div class="wallpaper-actions">
+                            <a href="../IMAGES/CITIES/city3.jpg" download><button class="download-btn">⬇
+                                    Download</button></a>
+                            <button class="favorite-btn">♡</button>
+                        </div>
+                        <span class="download-count">4,567 downloads</span>
+                    </div>
+                </div>
+                <div class="wallpaper-item">
+                    <img src="../IMAGES/ANIMALS/an6.jpg" alt="Wildlife animal wallpaper 6">
+                    <div class="wallpaper-overlay">
+                        <div class="wallpaper-actions">
+                            <a href="../IMAGES/ANIMALS/an6.jpg" download><button class="download-btn">⬇
+                                    Download</button></a>
+                            <button class="favorite-btn">♡</button>
+                        </div>
+                        <span class="download-count">4,567 downloads</span>
+                    </div>
+                </div>
+        </section>
+    </main>
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <a href="homepage.html">
+                    <img src="../ASSETS/logo.png" class="nav-logo" alt="Logo">
+                </a>
+            </div>
+            <ul class="footer-links">
+                <li><a href="../PAGES/Privacy & Policy.html">Privacy Policy</a></li>
+                <li><a href="../PAGES/Terms of use.html">Terms of Service</a></li>
+                <li><a href="../PAGES/About-us.html">About Us</a></li>
+            </ul>
+            <div class="footer-socials">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+        <p class="copyright">&copy; 2026 Capstone project Group10 WallpaperHub. All rights reserved.</p>
+    </footer>
+
+
+
+    <script src="../JAVASCRIPTS/gallery.js"></script>
+</body>
+
+</html>

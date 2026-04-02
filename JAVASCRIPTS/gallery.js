@@ -184,12 +184,13 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // Highlight "All" button on landing page
-    const allButton = document.querySelector('.categories-container a[href="index.html"]');
+    const allButton = document.querySelector('.categories-container a[href="homepage.html"]');
     if (allButton) {
         allButton.classList.add('active');
     }
 
     const searchInput = document.getElementById("wallpaper-search");
+    const initialQuery = new URLSearchParams(window.location.search).get("q")?.trim() || "";
     const wallpaperItems = Array.from(document.querySelectorAll(".wallpaper-item"));
     const favoriteButtons = Array.from(document.querySelectorAll(".favorite-btn"));
     const favoritesLink = document.getElementById("favorites-link");
@@ -199,7 +200,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let favorites = loadFavorites();
 
     wallpaperItems.forEach((item) => {
-        const image = item.querySelector("CATEGORY_WALLPAPERS");
+        const image = item.querySelector("img");
         if (!image) {
             return;
         }
@@ -208,6 +209,33 @@ document.addEventListener("DOMContentLoaded", () => {
         const imageKey = image.getAttribute("src") || "";
         item.dataset.imageKey = imageKey;
     });
+
+    if (searchInput) {
+        searchInput.title = "Search wallpapers by name, category, or file name";
+    }
+
+    document.querySelectorAll(".download-btn").forEach((button) => {
+        button.title = "Download this wallpaper";
+        button.setAttribute("aria-label", "Download this wallpaper");
+    });
+
+    document.querySelectorAll(".footer-socials a").forEach((link) => {
+        const iconClass = link.querySelector("i")?.className || "";
+        if (iconClass.includes("facebook")) {
+            link.title = "Visit our Facebook";
+            link.setAttribute("aria-label", "Visit our Facebook");
+        } else if (iconClass.includes("instagram")) {
+            link.title = "Visit our Instagram";
+            link.setAttribute("aria-label", "Visit our Instagram");
+        } else if (iconClass.includes("twitter")) {
+            link.title = "Visit our Twitter";
+            link.setAttribute("aria-label", "Visit our Twitter");
+        }
+    });
+
+    if (favoritesLink) {
+        favoritesLink.title = "Show only favorite wallpapers";
+    }
 
     favoriteButtons.forEach((button) => {
         const item = button.closest(".wallpaper-item");
@@ -234,6 +262,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     if (searchInput) {
+        searchInput.value = initialQuery;
         searchInput.addEventListener("input", filterWallpapers);
     }
 
@@ -276,6 +305,8 @@ document.addEventListener("DOMContentLoaded", () => {
             button.textContent = favorite ? "♥" : "♡";
             button.classList.toggle("is-favorite", favorite);
             button.setAttribute("aria-pressed", favorite ? "true" : "false");
+            button.title = favorite ? "Remove from favorites" : "Add to favorites";
+            button.setAttribute("aria-label", favorite ? "Remove from favorites" : "Add to favorites");
         });
     }
 
@@ -309,6 +340,7 @@ document.addEventListener("DOMContentLoaded", () => {
     function runCategoryPage() {
         const params = new URLSearchParams(window.location.search);
         const category = (params.get("category") || "all").toLowerCase();
+        const initialQuery = (params.get("q") || params.get("search") || "").trim();
         const categoryFavoritesStorageKey = "wallpaperhub-favorites";
 
         const titleEl = document.getElementById("category-type");
@@ -320,13 +352,13 @@ document.addEventListener("DOMContentLoaded", () => {
             return;
         }
 
-        // 2. Data Selection: Since 'all' is handled above, we only look for specific categories
-        let categoryWallpapers = CATEGORY_WALLPAPERS[category] || [];
+        const categoryWallpapers = category === "all"
+            ? Object.values(CATEGORY_WALLPAPERS).flat()
+            : (CATEGORY_WALLPAPERS[category] || []);
 
-        // 3. Dynamic Title: Simplified because 'all' is no longer a possibility here
-        titleEl.textContent = category
-            ? `${category.charAt(0).toUpperCase()}${category.slice(1)} Wallpapers`
-            : "Category Not Found";
+        titleEl.textContent = category === "all"
+            ? "All Wallpapers"
+            : `${category.charAt(0).toUpperCase()}${category.slice(1)} Wallpapers`;
 
         // 4. Update Button States
         const categoryButtons = document.querySelectorAll('#category-buttons .category');
@@ -335,7 +367,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const btnCategory = btn.href.split('category=')[1];
 
             // Toggle the 'active' class based on a strict equality match
-            if (btnCategory === category) {
+            if (btnCategory === category || (category === "all" && !btnCategory)) {
                 btn.classList.add('active');
             } else {
                 btn.classList.remove('active');
@@ -360,8 +392,8 @@ document.addEventListener("DOMContentLoaded", () => {
 						<img src="${wallpaper.src}" alt="${wallpaper.alt}">
 						<div class="wallpaper-overlay">
 							<div class="wallpaper-actions">
-								<a href="${wallpaper.src}" download><button class="download-btn">⬇ Download</button></a>
-								<button class="favorite-btn ${favorites.includes(wallpaper.src) ? "is-favorite" : ""}" data-image-key="${wallpaper.src}" aria-pressed="${favorites.includes(wallpaper.src) ? "true" : "false"}">${favorites.includes(wallpaper.src) ? "♥" : "♡"}</button>
+                                <a href="${wallpaper.src}" download><button class="download-btn" title="Download this wallpaper" aria-label="Download this wallpaper">⬇ Download</button></a>
+                                <button class="favorite-btn ${favorites.includes(wallpaper.src) ? "is-favorite" : ""}" data-image-key="${wallpaper.src}" aria-pressed="${favorites.includes(wallpaper.src) ? "true" : "false"}" title="${favorites.includes(wallpaper.src) ? "Remove from favorites" : "Add to favorites"}" aria-label="${favorites.includes(wallpaper.src) ? "Remove from favorites" : "Add to favorites"}">${favorites.includes(wallpaper.src) ? "♥" : "♡"}</button>
 							</div>
 							<span class="download-count">${wallpaper.downloads} downloads</span>
 						</div>
@@ -373,7 +405,11 @@ document.addEventListener("DOMContentLoaded", () => {
             bindCategoryFavoriteButtons();
         };
 
-        render();
+        if (pageSearchInput) {
+            pageSearchInput.value = initialQuery;
+        }
+
+        render(initialQuery);
 
         if (pageSearchInput) {
             pageSearchInput.addEventListener("input", (event) => render(event.target.value));
