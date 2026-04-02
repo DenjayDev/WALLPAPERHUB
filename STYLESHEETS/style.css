@@ -18,7 +18,8 @@ body {
 .header-content {
     display: flex;
     align-items: center;
-    background-color: white;
+    background-image:url(a.jpg);
+    background-size: cover;
     z-index: 100;
     padding: 10px 20px;
     /* the 2 values represent the top/bottom and left/right padding respectively */
