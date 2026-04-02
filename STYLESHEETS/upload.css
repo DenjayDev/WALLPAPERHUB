@@ -39,7 +39,7 @@ h1,p {
     margin-top:10px;
     font-weight: 600;
     text-shadow: 0 2px 4px rgba(0,0,0,0.2);
-    color: orangered;
+    color: white;
     font-style: italic;
 }
 
@@ -60,7 +60,7 @@ h1,p {
 }
 
 #Upload {
-    background-color: rgb(246, 4, 4);
+    background-color:rgb(250, 98, 3;
     border: none;
     color: white;
     padding: 12px;
@@ -73,7 +73,7 @@ h1,p {
 }
 
 #Upload:hover {
-    background-color: rgb(250, 98, 3);
+    background-color: orangered;
     transform: translateY(-2px);
 }
 
