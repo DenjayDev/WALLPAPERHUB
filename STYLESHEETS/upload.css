@@ -7,7 +7,7 @@ body {
     align-items: center;
     min-height: 100vh;
    
-    background-image: url(a.jpg);
+    background-image: url(../ASSETS/a.jpg);
     background-size: cover;
     background-attachment: fixed;
     font-family: 'Segoe UI', sans-serif;

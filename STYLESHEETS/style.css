@@ -9,7 +9,7 @@
 
 body {
     width: 100%;
-    background-image:url(a.jpg);
+    background-image:url(../ASSETS/a.jpg);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -18,7 +18,7 @@ body {
 .header-content {
     display: flex;
     align-items: center;
-    background-image:url(a.jpg);
+    background-image:url(../ASSETS/a.jpg);
     background-size: cover;
     z-index: 100;
     padding: 10px 20px;
@@ -347,20 +347,88 @@ button:focus-visible {
     text-align: center;
 }
 
-.footer-content {
-    background-color: white;
-    box-shadow: 20px 10px 18px 0 rgba(0, 0, 0, 0.708);
-    min-height: 200px;
-    height: auto;
-    padding: 16px;
+/* Footer Styling */
+.main-footer {
+    background: rgba(0, 0, 0, 0.4);
+    padding: 40px 20px 20px;
+    margin-top: auto;
+    border-top: 1px solid var(--glass-border);
 }
 
-.footer-p {
-    color: rgb(105, 41, 9);
-    font-size: 18px;
-    font-weight: normal;
-    font-family: "Segoe UI", Roboto, Arial, sans-serif;
+.footer-content {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-logo {
+    display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.footer-logo span {
+    color: var(--primary-orange);
+}
+.nav-logo{ 
+    height: 100px; /* Increase this number to make the logo bigger */
+    width: auto;
+    margin-left: -50px; /* This "pulls" the logo further to the left */
+    margin-right: 4px;
+    object-fit: contain;
+    float: left;
+    padding-top: .6px;
+    cursor: pointer;
+    
+    /* Using the blend mode again to hide that white/gray background box */
+    mix-blend-mode: screen;
+    margin: 0 auto;
+   
+    
+}
+
+.footer-links {
+   display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #bbb;
+    font-size: 0.9rem;
+    transition: 0.3s;
+     white-space: nowrap; 
+}
+
+.footer-links a:hover {
+    color:  #D8C9A7;
+}
+
+.footer-socials a {
+    display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
+  color: white;
+  white-space: nowrap;
+}
+
+.footer-socials a:hover {
+    color:  #D8C9A7;
+}
+
+.copyright {
     text-align: center;
+    color: #777;
+    font-size: 14px;
+    margin-top: 30px;
 }
 
 @media (max-width: 768px) {

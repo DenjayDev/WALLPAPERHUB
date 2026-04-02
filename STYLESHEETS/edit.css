@@ -13,7 +13,7 @@ body{
     justify-content: center;
     flex-direction: column;
     height: 100vh;
-    background:url(a.jpg);
+    background:url(../ASSETS/a.jpg);
 
     background-size: cover;
     background-position: center;
