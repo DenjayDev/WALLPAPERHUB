@@ -138,6 +138,7 @@ box-shadow: #ff7200;
 .search-box .search-text{
     width: calc(100% - 30px);
     padding: 0 6px;
+    margin-top:-10px;
 }
 .search-btn{
     text-decoration: none;
@@ -149,6 +150,7 @@ box-shadow: #ff7200;
     align-items: center;
     width: 30px;
     height:30px ;
+    margin-top:-10px;
 }
 .search-text{
     border: none;
