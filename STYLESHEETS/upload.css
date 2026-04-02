@@ -14,17 +14,16 @@ body {
     align-items: center;
     min-height: 100vh;
     font-family:"Segoe UI", Roboto, Arial, sans-serif;
-     background: linear-gradient(to right, #c0c0c3 0%, white 100%);
+     background-image:url(a.jpg);
+     background-attachment: fixed;
+     background-size: cover;
+     background-position: center;
 }
 
 
 .container {
     margin-top: 100px;
     margin-bottom: 100px;
-    background-image: url(a.jpg);
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center;
     backdrop-filter: blur(15px);           
     -webkit-backdrop-filter: blur(15px);   
     border: 1px solid rgba(255, 255, 255, 0.2); 
