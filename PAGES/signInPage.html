@@ -4,88 +4,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign-In Page</title>
-    <link rel="stylesheet" href="../STYLESHEETS/signin.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="../STYLESHEETS/edit.css">
+    <title> Login Page </title>
 </head>
 
 <body>
-    <br>
-    <h2 id="back-link"><a href="index.html"> &#8592</a> Back to Homepage</h2>
-    <div class="mainSignIn">
-        <div class="signIn">
-            <form action="/SignIn" method="post">
-                <label id="lg"> LOG IN</label>
-                <br>
-                <div class="social-media-icons">
-                    <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
-                    <a href="#" class="icon"><i class="fa-brands fa-twitter"></i></a>
-                    <a href="#" class="icon"><i class="fa-brands fa-google"></i></a>
+    <a href="index.html" ;<p class="back">&#10094 Back to Homepage</p>
+
+        
+    <div class="container" id="container">
+        <div class="form-container sign-up">
+
+           
+            <form>
+                <h1 class="heading1">Create Account</h1>
+                <div class="social-icons">
+                    <a href="https://accounts.google.com/v3/signin/accountchooser?as=gdUVj6qCc3PGKmQT" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
                     <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
                 </div>
-                <p>or use your email account</p>
-                <br>
-                <label>
-                    Email:
-                    <input type="email" name="email" placeholder="eg:abc@gmail.com" required>
-                </label>
-                <br>
-                <label>
-                    Password:
-                    <input type="password" name="password" placeholder="Password" required>
-                </label>
-
-                <span class="forgot-password"><a href="#">Forgot Password?</a></span>
-                <br>
-                <button class="signIn-btn" type="submit"><b>SIGN IN</b></button>
+                <span>or use your email for registeration</span>
+                <input type="text" placeholder="Name">
+                <input type="email" placeholder="Email">
+                <input type="password" placeholder="Password">
+                <button>Sign Up</button>
             </form>
         </div>
-        <br><br>
-        <div class="signUp">
-            <form action="signInPage.html" method="post">
-                <Label> SIGN UP</Label>
-                <div class="social-media-icons">
-                    <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
-                    <a href="#" class="icon"><i class="fa-brands fa-twitter"></i></a>
-                    <a href="#" class="icon"><i class="fa-brands fa-google"></i></a>
+        <div class="form-container sign-in">
+            <form>
+                <h1>Sign In</h1>
+                <div class="social-icons">
+                    <a href="https://accounts.google.com/v3/signin/accountchooser?as=gdUVj6qCc3PGKmQT" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
                     <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
                 </div>
-                <p>or use your email for registration</p>
-                <label>
-                    Full Names:
-                    <input type="text" name="First Name" placeholder="eg: Caleb Osei" required>
-                </label>
-                <br>
-                <label>
-                    Email:
-                    <input type="email" name="email" placeholder="eg:abc@gmail.com" required>
-                </label>
-                <br>
-                <label>
-                    Password:
-                    <input type="password" name="Password" placeholder="Password" required>
-                </label>
-                <br>
-
-                <button class="signUp-btn" type="submit"><b>SIGN UP</b></button>
+                <span class="txt">or use your email password</span>
+                <input type="email" placeholder="Email">
+                <input type="password" placeholder="Password">
+                <a href="#"><span class="forg">Forget Your Password?</span></a>
+                <button class="button">Sign In</button>
             </form>
         </div>
         <div class="toggle-container">
             <div class="toggle">
-                <div class="toggle-panel toggle-right">
-                    <h2>New Here?</h2>
-                    <p>Sign up and discover a great amount of new opportunities!</p>
-                    <button id="signUp-btn" class="hidden">SIGN UP</button>
-                </div>
                 <div class="toggle-panel toggle-left">
-                    <h2>One of us?</h2>
-                    <p>If you already have an account, just sign in. We've missed you!</p>
-                    <button id="signIn-btn" class="hidden">SIGN IN</button>
+                    <h1>Welcome Back!</h1>
+                    <p class="txt">Enter your personal details to use all of site features</p>
+                    <button class="button" id="login">Sign In</button>
+                </div>
+                <div class="toggle-panel toggle-right">
+                    <h1>Hello, Friend!</h1>
+                    <p class="txt">Register with your personal details to use all of site features</p>
+                    <button class="button" id="register">Sign Up</button>
                 </div>
             </div>
         </div>
     </div>
-    <script src="../JAVASCRIPTS/index.js"></script>
+
+    <script src="../JAVASCRIPTS/script.js"></script>
 </body>
 
 </html>
